@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>EmbraceEase</title>
+<!-- MDB -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Bootstrap Icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+<!-- SimpleLightbox plugin CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/mdb.min.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/custom.css" rel="stylesheet" />
+
+<!-- Modal CSS -->
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(203, 184, 201); /* Fallback color */
+  background-color: rgba(187, 179, 189, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  align-items: center;
+  position: right;
+  margin: auto;
+  padding: 2%;
+  border: 2px solid #080000;
+  width: 10%;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(242, 239, 242, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+/* Circle style */
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #a8abac; /* Change the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Add cursor pointer for interaction */
+}
+
+/* Image inside the circle */
+.circle-img {
+    width: 30px; /* Adjust image size as needed */
+    height: 30px;
+    border: width 2px;;
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+
+/* The Close Button */
+.close {
+  color: rgb(21, 1, 1);
+  float: right;
+  height: 15px;
+  font-size: 50px;
+  font-weight: bold;
+  align-items: center;
+  height: fit-content;
+  background-color: #b1d5e1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f71818;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(236, 123, 123);
+  transition: 0.2s;
+}
+.text-success
+{
+  align-items: center;
+  background-color: #b1d5e1;
+  text-align: center;
+  text-transform: none;
+  text-wrap: nowrap;
+}
+.modal-body
+{
+  align-items: center;
+  height: fit-content;
+  display: flex;
+}
+
+.modal-header {
+  align-items: center;
+  padding: 1px;
+  margin:auto;
+  height: 10px;
+  width: auto;
+  }
+.button1
+{
+    width: fit-content;
+
+}
+.button1:hover
+{
+  transition: 0.2s;
+  cursor: pointer;
+  
+}
+.button2
+{
+    width: fit-content;
+    
+}
+.button2:hover
+{
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="index.html">
+              <img height="" width="30" src="assets/logo.png" alt="LOGO">
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#carouselExampleIndicators">HOW TO USE</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#portfolio">AI</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contact">CONTACT</a>
+                  </li>
+                  <li class="nav-item">
+                      <!-- The Modal -->
+                      <li class="nav-item">
+                        <div id="myCircle" class="circle">
+                            <img src="assets\profile.png" alt="Human Photo" class="circle-img">
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                  <a href="pages/log.html">
+                                    <div class="modal-body">
+                                      <button id="button1">SignUp</button>
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <div class="modal-body">
+                                      <a href="pages/log.html">
+                                      <button id="button2">Login</button>
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+    <!-- Your existing HTML content goes here -->
+<header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="text-white">EmbraceEase- Your Personal Oasis in Virtual Landscape</h1>
+                        <!-- <hr class="divider" /> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Home Section START-->
+        <section class="page-section bg-white text-black mt-2" id="home">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 has-box-shadow mb-4">
+        				<div class="container px-4 px-lg-5 text-center pt-4">
+        				    <img class="img-fluid mb-3 home-img" src="assets/logo.png" alt="LOGO" />
+        				    <hr align="center" class="hr">
+        				    <h2 class="mb-4 p-3 f-w-700">Welcome to EmbraceEase</h2>
+        				</div>
+        			</div>
+        			<div class="col-lg-12 has-box-shadow mb-4 pb-3">
+        				<div class="container px-4 px-lg-5 text-center pt-4">
+        				    <h1 class="mb-4 f-s-3-rem">EmbraceEase</h1>
+        				    <h4 class="mb-4">+63051603216</h4>
+        				    <a class="btn btn-secondary p-3" href="tel:+4368110282189"><i class="bi-telephone px-1"></i>Contact</a>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!-- Home Section END-->
+        <!-- Carousel Section START-->
+        <div class="container-fluid p-0 mt-5">
+        	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        	  <div class="carousel-indicators">
+        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        	  </div>
+        	  <div class="carousel-inner">
+        	    <div class="carousel-item active">
+        	      <img src="img/webp/mental-health-happiness-harmony-creative-260nw-1909041085.webp" class="d-block w-100 slider-img-size" alt="..." height="50" weight = "50">
+        	    </div>
+        	    <div class="carousel-item">
+        	      <img src="img/webp/istockphoto-1353578957-612x612.jpg" class="d-block w-100 slider-img-size" alt="...">
+        	    </div>
+        	    <div class="carousel-item">
+        	      <img src="assets/webp/3.jpg" class="d-block w-100 slider-img-size" alt="...">
+        	    </div>
+        	    <div class="carousel-item">
+        	      <img src="assets/webp/4.jpeg" class="d-block w-100 slider-img-size" alt="...">
+        	    </div>
+        	  </div>
+        	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        	    <span class="visually-hidden">Previous</span>
+        	  </button>
+        	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        	    <span class="visually-hidden">Next</span>
+        	  </button>
+        	</div>
+        </div>
+        <!-- Carousel Section END-->
+        <!-- Portfolio Section START-->
+        <div id="portfolio">
+            <div class="container-fluid p-0 mt-5">
+            	<div class="row g-0">
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/GYNAKO.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/Beihilfe.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/OIP.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/Teeniesprechstunde.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/Schwangerschaft.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 p-2">
+                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                          <img src="assets/webp/Abklarung.webp" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12 p-2 notice-responsive">
+                    	<div class="alert alert-info" role="alert">
+                    	  <h4><strong class="text-success">End</strong> scorll up</h4>
+                    	</div>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <!-- Portfolio Section END-->
+        <!-- Contact Section START-->
+        <section class="page-section mt-2" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row g-0">
+        			<!-- Google map Section START-->
+                	<div class="col-lg-6 col-sm-12 p-2 mr-5 has-box-shadow">
+                		<div class="row justify-content-center">
+                		    <div class="col-lg-12 text-center mt-4">
+                    			<iframe class="iframe-map shadow-sm" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.607876809808!2d15.613119116376302!3d48.21416837922978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477279ae6d740d29%3A0xf0cc405e7540823f!2sGaia%20Klinik!5e0!3m2!1sde!2sat!4v1625388282013!5m2!1sde!2sat" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                		    </div>
+                		</div>
+                	</div>
+        			<!-- Google map Section END-->
+                	<div class="col-lg-5 col-sm-12 p-2 ml-5 has-box-shadow has-m-l">
+                		<div class="row justify-content-center">
+                		    <div class="col-lg-12 text-center">
+                		        <h2 class="mt-3 pl-3"><i class="bi-telegram fs-2 text-muted"></i>EmbraceEase</h2>
+                		        <hr class="divider" />
+                		        <p class="text-muted mb-5">For any Queries contact below email or phone number</p>
+                		    </div>
+                		</div>
+                		<div class="row justify-content-center">
+                		    <div class="col-lg-12 text-center mb-4">
+                		    	<h4 class="mb-3">
+                                    <i class="bi-envelope fs-2 text-dark"></i>EMAIL:
+                                </h4>
+                		        <a href="mailto:office@gaia-klinik.com">
+                		        	<div class="mb-3">
+                                        <span class="bg-kontact px-3 py-2">
+                                            minorprojectb@gmail.com
+                                        </span>
+                                    </div>
+                		        </a>
+                		    </div>
+                		</div>
+                		<div class="row justify-content-center">
+                		    <div class="col-lg-12 text-center mb-4">
+                		        <h4  class="mb-3"><i class="bi-phone fs-2 text-muted"></i>TELEFON:</h4>
+                		        <a href="tel:+4368110282189">
+                		        	<div class="mb-3">
+                                        <span class="bg-kontact px-3 py-2">
+                                            +63051603216
+                                        </span>
+                                    </div>
+                		    	</a>
+                		    </div>
+                		</div>
+                		<div class="row justify-content-center">
+                		    <div class="col-lg-12 text-center mb-4">
+                		        <h4 class="mb-3"><i class="bi-ui-checks fs-2 m-1 text-muted"></i>xxx</h4>
+                		        <div>Feedback</div>
+                		        <div>Reviews</div>
+                		    </div>
+                		</div>
+                		<hr class="divider" />
+                	</div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section END-->
+        <!-- Footer Section START-->
+        <footer class="bg-dark has-box-shadow mt-2 py-5">
+            <div class="container px-4 px-lg-5">
+            	<div class="row g-0 justify-content-center">
+            		<div class="col-lg-3 col-md-12">
+            		</div>
+            	</div>
+        	</div>
+        </footer>
+        <!-- Footer Section END-->
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+
+<!-- Modal JavaScript -->
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+    // Get the circle that opens the modal
+    var circle = document.getElementById("myCircle");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the circle, open the modal 
+    circle.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+     // Get the buttons
+     var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+
+    // Add click event listeners to the buttons
+    button1.addEventListener("click", function() {
+        // Redirect to page1.html
+        window.location.href = "pages/log.html";
+    });
+
+    button2.addEventListener("click", function() {
+        // Redirect to page2.html
+        window.location.href = "file:///C:/Users/aishw/OneDrive/Desktop/Medical-Website-main/Medical-Website-main/pages/log.html";
+    });
+</script>
+</body>
+</html>
