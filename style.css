@@ -1,0 +1,289 @@
+html {
+  height: 100%;
+  scroll-padding-top: calc(4.5rem - 1px);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.text-white-75 {
+  color: rgba(109, 103, 103, 0.856) !important;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font: weight 250px;;
+  text-transform: uppercase;
+  border: none;
+  border-radius:5rem;
+}
+
+hr.divider {
+  height: 0rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #f4623a;
+  opacity: 1;
+}
+
+hr.divider-light {
+  background-color: #070000;
+}
+
+
+#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.32cm;
+  background: rgb(244, 177, 5);
+  transition: background-color 0.2s ease;
+  box-shadow: 0 0.5rem 1rem rgba(247, 245, 245, 0.15);
+  z-index: 1000;
+}
+
+#mainNav .navbar-brand {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  color: #00070e;
+}
+
+#mainNav .navbar-nav {
+  text-align: right;
+  text-decoration: none;
+     /* Align navigation bar items to the right */
+}
+
+#mainNav .navbar-collapse {
+  height: auto; /* Set height to auto to ensure equal height for items */
+}
+
+#mainNav .navbar-nav .nav-item {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Vertically center items */
+}
+
+#mainNav .navbar-nav .nav-link {
+  padding: 1rem; /* Adjust padding for each navigation link */
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: black;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 0.75rem 0;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+  color: #a496a1;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #f4623a !important;
+  height: 10px;
+}
+.carousel-item active
+{
+  height: fit-content;
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    box-shadow: none;
+  }
+  #mainNav .navbar-brand {
+    color: rgba(116, 111, 115, 0.7);
+  }
+  #mainNav .navbar-brand:hover {
+    color: #f4f0f0;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #000;
+    background-color: #dfd4d4;
+    width: fit-content;
+    height: auto;
+    transition: 0.2s;
+  }
+  #mainNav .navbar-nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+    color: #000;
+  }
+  #mainNav.navbar-shrink {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover {
+    color: #f4623a;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+    color: #f4623a;
+  }
+}
+
+header.masthead {
+  padding-top: 11rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  margin-top: 50px;
+  height: 75vh;
+  min-height: 0rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../assets/webp/bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@media (max-width: 400px) {
+  header.masthead {
+    padding-top: 10rem;
+  }
+}
+
+.slider-img-size {
+  height: 600px;
+  width: 100%;
+}
+
+@media (min-width: 300px) {
+  .slider-img-size {
+    height: 300px;
+  }
+}
+
+@media (min-width: 600px) {
+  .slider-img-size {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider-img-size {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider-img-size {
+    height: 600px;
+  }
+}
+
+#portfolio .container-fluid,
+#portfolio .container-sm,
+#portfolio .container-md,
+#portfolio .container-lg,
+#portfolio .container-xl,
+#portfolio .container-xxl {
+  max-width: 1920px;
+}
+
+#portfolio .container-fluid .portfolio-box,
+#portfolio .container-sm .portfolio-box,
+#portfolio .container-md .portfolio-box,
+#portfolio .container-lg .portfolio-box,
+#portfolio .container-xl .portfolio-box,
+#portfolio .container-xxl .portfolio-box {
+  position: relative;
+  display: block;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption,
+#portfolio .container-md .portfolio-box .portfolio-box-caption,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption,
+#portfolio .container-xxl .portfolio-box .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(24, 5, 0, 0.9);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-md .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category,
+#portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-md .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name,
+#portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
+  font-size: 1.2rem;
+}
+
+#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-sm .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-md .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-lg .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-xl .portfolio-box:hover .portfolio-box-caption,
+#portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.notice-responsive h4 {
+  font-size: 1rem !important;
+}
+
+@media (min-width: 600px) {
+  .notice-responsive h4 {
+    font-size: 1.2rem !important;
+  }
+}
+
+.bg-kontact {
+  text-align: center;
+  width: 200px;
+  background: rgba(121, 121, 121, 0.247);
+  border: rgba(0, 0, 0, 0.048) 1px solid;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.has-m-l {
+  margin-left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .has-m-l {
+    margin-left: 0;
+  }
+}
